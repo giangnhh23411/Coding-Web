@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frameset & Image Maps</title>
+</head>
+
+<!-- Chia layout: 
+  - Hàng 1: logo
+  - Hàng 2: bên trái là image map, bên phải là nội dung  -->
+<frameset rows="150,*" border="1">
+    <!-- Logo -->
+    <frame src="logo.html" name="logoFrame" scrolling="no" noresize>
+
+    <!-- Nội dung chính -->
+    <frameset cols="30%,70%">
+        <frame src="map.html" name="mapFrame">
+        <frame src="home.html" name="my_frame">
+    </frameset>
+</frameset>
+
+</html>
