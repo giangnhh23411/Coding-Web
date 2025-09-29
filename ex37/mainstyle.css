@@ -32,7 +32,7 @@ padding:.3em 6px;
 #container li ul
 {position:absolute;
 display:none;
-width:10em
+width:100%
 }
 #container li:hover ul {
  display:block;
@@ -41,3 +41,4 @@ width:10em
  width:100%;
  border:1px solid green
 }
+
