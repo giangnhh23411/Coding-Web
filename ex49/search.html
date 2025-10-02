@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Ex49 - Nguyen Hoang Huong Giang </title>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      width: 650px;
+      margin: 20px auto;
+      background-color: #b0e0e6;
+      padding: 20px;
+      border: 2px solid blue;
+    }
+    h2 {
+      color: red;
+      margin: 0;
+    }
+    hr {
+      border: 1px solid gray;
+    }
+    .section {
+      margin: 15px 0;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 15px;
+    }
+    .option {
+      text-align: center;
+    }
+    .option img {
+      display: block;
+      margin: 5px auto;
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+  <script>
+    function searchSimulation() {
+      alert("Search simulation running...");
+    }
+    function helpPage() {
+      alert("This is the Help page!");
+    }
+  </script>
+</head>
+<body>
+  <form id="classifiedForm" name="classifiedForm">
+    <h2>Online Classifieds Search Form</h2>
+    <hr>
+
+    <div class="section">
+      <b>1) Search for a classified in the following sections:</b><br>
+      <input type="radio" id="secEmployment" name="section" value="Employment">
+      <label for="secEmployment">Employment</label>
+
+      <input type="radio" id="secPersonal" name="section" value="Personal">
+      <label for="secPersonal">Personal</label>
+
+      <input type="radio" id="secForSale" name="section" value="ForSale">
+      <label for="secForSale">For Sale</label>
+
+      <input type="radio" id="secMisc" name="section" value="Miscellaneous">
+      <label for="secMisc">Miscellaneous</label>
+
+      <input type="radio" id="secHousing" name="section" value="Housing">
+      <label for="secHousing">Housing</label>
+
+      <input type="radio" id="secAll" name="section" value="All">
+      <label for="secAll">All of the above</label>
+    </div>
+
+    <div class="section">
+      <b>2) Search the following publications:</b><br>
+      <input type="checkbox" id="pubMidwest" name="publication" value="Midwest" checked>
+      <label for="pubMidwest">Midwest times</label>
+
+      <input type="checkbox" id="pubModern" name="publication" value="Modern">
+      <label for="pubModern">Modern News</label>
+
+      <input type="checkbox" id="pubEmployment" name="publication" value="Employment">
+      <label for="pubEmployment">Employment Today</label><br>
+
+      <input type="checkbox" id="pubGreatLakes" name="publication" value="GreatLakes" checked>
+      <label for="pubGreatLakes">Great Lakes Classifieds</label>
+
+      <input type="checkbox" id="pubMiddleton" name="publication" value="Middleton">
+      <label for="pubMiddleton">Middleton Daily</label>
+
+      <input type="checkbox" id="pubCashtown" name="publication" value="Cashtown">
+      <label for="pubCashtown">Cashtown Daily News</label>
+    </div>
+
+    <div class="section">
+      <b>3) From</b>
+      <input type="date" id="fromDate" name="fromDate">
+      <b>to</b>
+      <input type="date" id="toDate" name="toDate">
+    </div>
+
+    <div class="section">
+      <b>4) Enter a few keywords to describe the classified.</b><br>
+      <input type="text" id="keywords" name="keywords" size="60">
+    </div>
+
+    <div class="section">
+      <b>5) Click one of the options below:</b><br>
+      <div class="btn-container">
+        <div class="option">
+          <input type="button" id="btnSearch" name="btnSearch" value="Search" onclick="searchSimulation()">
+          <img src="Search.gif" alt="Search">
+        </div>
+        <div class="option">
+          <input type="button" id="btnHelp" name="btnHelp" value="Help" onclick="helpPage()">
+          <img src="Help.gif" alt="Help">
+        </div>
+        <div class="option">
+          <input type="reset" id="btnCancel" name="btnCancel" value="Cancel">
+          <img src="Cancel.gif" alt="Cancel">
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
