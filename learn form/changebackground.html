@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script>
+        function change_background(value) 
+        {
+        let mydiv = document.getElementById("mydiv");
+        mydiv.setAttribute("style", "width:100%; height:100px; background-color:" + value + ";");
+        }
+    </script>
+</head>
+<body>
+    <h3> Change bg-color </h3>
+    <select id="mybg" name="mybg" onchange="change_background(this.value)">
+        <option value="blue"> Blue </option>
+        <option value="yellow"> Yellow </option>
+        <option value="red"> Red </option>
+    </select>
+    <div style="width:100%; height:100px; background-color: pink;" id="mydiv" name="mydiv">
+
+    </div>
+</body>
+</html>
