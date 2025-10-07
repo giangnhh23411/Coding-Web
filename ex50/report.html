@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Ex50 - Nguyen Hoang Huong Giang </title>
+  <style>
+    body {
+      background-color: #e0ffff;
+      font-family: Arial, sans-serif;
+    }
+    form {
+      width: 700px;
+      margin: 20px auto;
+      background-color: #b0e0e6;
+      padding: 20px;
+      border: 2px solid blue;
+    }
+    h2 {
+      margin: 0;
+    }
+    hr {
+      border: 1px solid gray;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #000;
+    }
+    th, td {
+      padding: 5px;
+      text-align: center;
+    }
+    .btn-container {
+      margin-top: 15px;
+    }
+  </style>
+  <script>
+    function submitAlert() {
+      alert("Travel expense form submitted!");
+    }
+  </script>
+</head>
+<body>
+  <form id="expenseForm" name="expenseForm">
+    <div style="text-align:center;">
+      <img src="DeLong.jpg" alt="DeLong Enterprises">
+    </div>
+    <h2>Travel Expense Report</h2>
+    <hr>
+
+    <p> 1) First Name: 
+      <input type="text" id="firstName" name="firstName">
+      Last Name: 
+      <input type="text" id="lastName" name="lastName">
+    </p>
+
+    <p> 2) Social Security Number: 
+      <input type="text" id="ssn" name="ssn">
+    </p>
+
+    <p> 3) Department: 
+      <select id="department" name="department">
+        <option>Accounting</option>
+        <option>Finance</option>
+        <option>HR</option>
+        <option>IT</option>
+        <option>Other</option>
+      </select>
+    </p>
+
+    <p> 4) Describe the purpose of your trip.</p>
+    <textarea id="purpose" name="purpose" rows="4" cols="80"></textarea>
+
+    <p> 5) Itemize your travel expenses</p>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Amount</th>
+      </tr>
+      <tr>
+        <td><input type="date" id="date1" name="date1"></td>
+        <td><input type="text" id="desc1" name="desc1"></td>
+        <td>
+          <select id="cat1" name="cat1">
+            <option>Meal</option>
+            <option>Lodging</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="number" id="amt1" name="amt1" step="0.01"></td>
+      </tr>
+      <tr>
+        <td><input type="date" id="date2" name="date2"></td>
+        <td><input type="text" id="desc2" name="desc2"></td>
+        <td>
+          <select id="cat2" name="cat2">
+            <option>Meal</option>
+            <option>Lodging</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="number" id="amt2" name="amt2" step="0.01"></td>
+      </tr>
+      <tr>
+        <td><input type="date" id="date3" name="date3"></td>
+        <td><input type="text" id="desc3" name="desc3"></td>
+        <td>
+          <select id="cat3" name="cat3">
+            <option>Meal</option>
+            <option>Lodging</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="number" id="amt3" name="amt3" step="0.01"></td>
+      </tr>
+      <tr>
+        <td><input type="date" id="date4" name="date4"></td>
+        <td><input type="text" id="desc4" name="desc4"></td>
+        <td>
+          <select id="cat4" name="cat4">
+            <option>Meal</option>
+            <option>Lodging</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><input type="number" id="amt4" name="amt4" step="0.01"></td>
+      </tr>
+    </table>
+
+    <p> 6) Have you submitted your receipts?
+      <input type="radio" id="receiptsYes" name="receipts" value="Yes"> <label for="receiptsYes">Yes</label>
+      <input type="radio" id="receiptsNo" name="receipts" value="No"> <label for="receiptsNo">No</label>
+    </p>
+
+    <div class="btn-container">
+      <input type="button" id="btnSubmit" name="btnSubmit" value="Submit travel expenses" onclick="submitAlert()">
+      <input type="reset" id="btnReset" name="btnReset" value="Reset">
+    </div>
+
+    <p><small> Questions? Contact Debbie Larson in Accounting (ext. 2150). </small></p>
+  </form>
+</body>
+</html>
