@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Change Background </title>
+  <script type="text/javascript">
+    function change_background() {
+      let v = Math.floor(Math.random() * 5);
+      let mydiv = document.getElementById("mydiv");
+
+      switch (v) {
+        case 0:
+          mydiv.style.backgroundColor = "purple";
+          break;
+        case 1:
+          mydiv.style.backgroundColor = "pink";
+          break;
+        case 2:
+          mydiv.style.backgroundColor = "green";
+          break;
+        case 3:
+          mydiv.style.backgroundColor = "cyan";
+          break;
+        case 4:
+          mydiv.style.backgroundColor = "red";
+          break;
+        default:
+          mydiv.style.backgroundColor = "black";
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="mydiv"
+       style="width:100%; height:100px; background-color:aqua;"
+       onclick="change_background()">
+  </div>
+</body>
+</html>

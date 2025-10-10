@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> For - Nguyễn Hoàng Hương Giang </title>
+  <script type="text/javascript">
+    function draw() 
+    {
+      mydiv = document.getElementById("mydiv");
+      mydiv.innerHTML = ""; // Xóa nội dung cũ
+
+      for (let i = 0; i < 100; i++) 
+      {
+        v = Math.floor(Math.random() * 500);
+        p = "<p>" + v + "</p>";
+        mydiv.innerHTML += p;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Nội dung trang</h1>
+  <div id="mydiv"
+       style="background-color: yellow; padding:10px;"
+       onclick="draw()">
+  </div>
+</body>
+</html>
