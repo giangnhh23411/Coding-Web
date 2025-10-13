@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title> Ex56 - Nguyen Hoang Huong Giang </title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function getInput() {
+      return document.getElementById("input").value;
+    }
+    function setResult(text) {
+      document.getElementById("result").value = text;
+    }
+    function normalizeSpaces(s) {
+      s = s.replace(/\s+/g, " ");
+      while (s.charAt(0) === " ") s = s.substring(1);
+      while (s.charAt(s.length - 1) === " ") s = s.substring(0, s.length - 1);
+      return s;
+    }
+    function enterData() {
+      setResult(getInput());
+    }
+    function countUpperCase() {
+      var s = getInput(), cnt = 0;
+      for (var i = 0; i < s.length; i++) {
+        var c = s.charAt(i);
+        if (c >= 'A' && c <= 'Z') cnt++;
+      }
+      setResult("Number of uppercase characters: " + cnt);
+    }
+    function upperCase() {
+      setResult(getInput().toUpperCase());
+    }
+    function oneWordPerLine() {
+      var s = normalizeSpaces(getInput());
+      if (s.length === 0) { setResult(""); return; }
+      var words = s.split(" ");
+      setResult(words.join("\n"));
+    }
+    function lowerCase() {
+      setResult(getInput().toLowerCase());
+    }
+    function countWord() {
+      var s = normalizeSpaces(getInput());
+      var count = (s.length === 0) ? 0 : s.split(" ").length;
+      setResult("Word count: " + count);
+    }
+    function countLowerCase() {
+      var s = getInput(), cnt = 0;
+      for (var i = 0; i < s.length; i++) {
+        var c = s.charAt(i);
+        if (c >= 'a' && c <= 'z') cnt++;
+      }
+      setResult("Number of lowercase characters: " + cnt);
+    }
+    function printVowelConsonant() {
+      var s = getInput().toLowerCase();
+      var vowels = "aeiou", vCount = 0, cCount = 0;
+      var vList = [], cList = [];
+      for (var i = 0; i < s.length; i++) {
+        var ch = s.charAt(i);
+        if (ch >= 'a' && ch <= 'z') {
+          if (vowels.indexOf(ch) !== -1) {
+            vCount++; vList.push(ch);
+          } else {
+            cCount++; cList.push(ch);
+          }
+        }
+      }
+      setResult(
+        "Vowels: " + vCount + "\n" + vList.join(" ") +
+        "\nConsonants: " + cCount + "\n" + cList.join(" ")
+      );
+    }
+  </script>
+</head>
+<body>
+  <table>
+    <tr><th colspan="2"><h1>Using String Processing functions</h1></th></tr>
+    <tr>
+      <td>
+        <fieldset>
+          <legend><b><label for="input">Input Data:</label></b></legend>
+          <textarea id="input" rows="5" cols="40" placeholder="Type your text here..."></textarea>
+        </fieldset>
+      </td>
+      <td>
+        <fieldset>
+          <legend><b><label for="result">Result:</label></b></legend>
+          <textarea id="result" rows="5" cols="40" readonly></textarea>
+        </fieldset>
+      </td>
+    </tr>
+    <tr>
+      <td><button type="button" onclick="enterData()">Enter Data</button></td>
+      <td><button type="button" onclick="countUpperCase()">Count the number of uppercase characters</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" onclick="upperCase()">Uppercase display</button></td>
+      <td><button type="button" onclick="oneWordPerLine()">Output one word per line</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" onclick="lowerCase()">Lowercase display</button></td>
+      <td><button type="button" onclick="countWord()">Word count</button></td>
+    </tr>
+    <tr>
+      <td><button type="button" onclick="countLowerCase()">Count the number of lowercase characters</button></td>
+      <td><button type="button" onclick="printVowelConsonant()">Print vowels, consonants</button></td>
+    </tr>
+    <tr>
+      <td class="center" colspan="2">
+        <a href="https://www.w3.org/" target="_blank">W3C's String Processing Website</a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
