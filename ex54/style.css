@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-collapse: collapse;
+  width: 300px;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 6px;
+}
+
+input[type="text"] {
+  width: 95%;
+  text-align: right;
+}
+
+button {
+  margin: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}

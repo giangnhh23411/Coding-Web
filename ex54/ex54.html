@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ex54 - Nguyen Hoang Huong Giang</title>
+    <script type="text/javascript">
+        // Tính MAX
+        function calcMax() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+            var result = Math.max(a, b, c);
+            document.getElementById("result").value = result;
+        }
+
+        // Tính MIN
+        function calcMin() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+            var result = Math.min(a, b, c);
+            document.getElementById("result").value = result;
+        }
+
+        // Tính sin(a)
+        function calcSin() {
+            var a = parseFloat(document.getElementById("a").value);
+            var result = Math.sin(a * Math.PI / 180); // độ sang radian
+            document.getElementById("result").value = result;
+        }
+
+        // Tính cos(a)
+        function calcCos() {
+            var a = parseFloat(document.getElementById("a").value);
+            var result = Math.cos(a * Math.PI / 180);
+            document.getElementById("result").value = result;
+        }
+
+        // Tính a^b
+        function calcPower() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var result = Math.pow(a, b);
+            document.getElementById("result").value = result;
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            margin: auto;
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 250px;
+        }
+        td {
+            border: 1px solid #999;
+            padding: 6px;
+        }
+        input[type="text"] {
+            width: 90%;
+            text-align: right;
+        }
+        input[type="button"] {
+            margin: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Using Math Functions</h2>
+    <table>
+        <tr>
+            <td>a:</td>
+            <td><input type="text" id="a"></td>
+        </tr>
+        <tr>
+            <td>b:</td>
+            <td><input type="text" id="b"></td>
+        </tr>
+        <tr>
+            <td>c:</td>
+            <td><input type="text" id="c"></td>
+        </tr>
+        <tr>
+            <td>Result:</td>
+            <td><input type="text" id="result" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="MAX" onclick="calcMax()">
+                <input type="button" value="MIN" onclick="calcMin()">
+                <input type="button" value="sin(a)" onclick="calcSin()">
+                <input type="button" value="cos(a)" onclick="calcCos()">
+                <input type="button" value="a^b" onclick="calcPower()">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
