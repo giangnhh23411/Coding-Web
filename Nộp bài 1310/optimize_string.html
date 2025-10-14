@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        function process_optimize()
+        {
+            let str = my_form.name_input.value.trim();
+            // Đưa về chữ thường toàn bộ
+            str = str.toLowerCase();
+            // Tách từ
+            let words = str.split(/\s+/);
+            // Viết hoa chữ cái đầu mỗi từ
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length > 0) {
+                    words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+                }
+            }
+            // Ghép lại
+            let formatted = words.join(" ");
+            // Hiển thị kết quả
+            document.getElementById("name_output").innerText = formatted;
+        }
+    </script>
+</head>
+<body>
+    <form name="my_form">
+        <table>
+            <tr>
+                <td> Input: </td>
+                <td> <input type="text" name="name_input" id="name_input" oninput="process_optimize()"/> </td>
+            </tr>
+            <tr>
+                <td> Output: </td>
+                <td id="name_output" id="name_output"> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
