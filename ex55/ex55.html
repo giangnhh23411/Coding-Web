@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Ex 55 - Nguyen Hoang Huong Giang </title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function solveQuadratic() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers!";
+                return;
+            }
+
+            if (a === 0) {
+                if (b === 0) {
+                    document.getElementById("result").innerHTML = (c === 0)
+                        ? "Infinite solutions"
+                        : "No solution";
+                } else {
+                    var x = -c / b;
+                    document.getElementById("result").innerHTML = "Linear equation → x = " + x;
+                }
+                return;
+            }
+
+            var delta = b * b - 4 * a * c;
+            var resultText = "";
+
+            if (delta < 0) {
+                resultText = "No real solution";
+            } else if (delta === 0) {
+                var x = -b / (2 * a);
+                resultText = "x₁ = x₂ = " + x;
+            } else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                resultText = "x₁ = " + x1 + " ; x₂ = " + x2;
+            }
+
+            document.getElementById("result").innerHTML = resultText;
+        }
+
+        function clearAll() {
+            document.getElementById("a").value = "";
+            document.getElementById("b").value = "";
+            document.getElementById("c").value = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">The quadratic equation</th>
+        </tr>
+        <tr>
+            <td>a:</td>
+            <td><input type="text" id="a"></td>
+        </tr>
+        <tr>
+            <td>b:</td>
+            <td><input type="text" id="b"></td>
+        </tr>
+        <tr>
+            <td>c:</td>
+            <td><input type="text" id="c"></td>
+        </tr>
+        <tr>
+            <td>Result:</td>
+            <td><span id="result"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="Find solution" onclick="solveQuadratic()">
+                <input type="button" value="Clear" onclick="clearAll()">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
